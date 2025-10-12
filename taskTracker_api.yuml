@@ -1,0 +1,221 @@
+openapi: 3.0.4
+info:
+  title: Task tracker
+  description: |-
+    A task planner is necessary for setting tasks, keeping track of task completion, and monitoring the working hours of each employee.
+  version: 1.0.12
+servers:
+  - url: https://taskTracker.swagger.io/api/v3
+tags:
+  - name: task
+    description: Everything about project tasks
+  - name: project
+    description: Everything about projects
+  - name: stage
+    description: List of stages
+  - name: customer
+    description: List of customers
+  - name: employee
+    description: All the necessary information about employees
+paths:
+  /task:
+    get:
+      operationId: getTask
+      tags: 
+        - task
+      responses:
+        '200':
+          $ref: '#/components/responses/TaskListResponses'
+    post:
+      operationId: createTask
+      tags: 
+        - task
+      requestBody: 
+        content: 
+          application/json: 
+            schema:
+              $ref: '#/components/schemas/Task'
+      responses: 
+        '201':
+          $ref: '#/components/responses/TaskResponses'
+            
+  /task/{taskID}:
+    patch:
+      operationId: updateTask
+      tags: 
+        - task
+      parameters: 
+        - $ref: '#/components/parameters/taskID'
+      requestBody: 
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/TaskPatch'
+      responses:
+        '202':
+          $ref: '#/components/responses/TaskResponses'
+    delete:
+      operationId: deleteTask
+      tags: 
+        - task
+      parameters: 
+        - $ref: '#/components/parameters/taskID'
+      responses: 
+        '204':
+          description: Delete success
+
+  /project:
+    get:
+      operationId: getProject
+      tags: 
+        - project
+      responses:
+        '200':
+          $ref: '#/components/responses/ProjectListResponses'
+    post:
+      operationId: createProject
+      tags: 
+        - project 
+      requestBody: 
+        content: 
+          application/json: 
+            schema:
+              $ref: '#/components/schemas/Project'
+      responses: 
+        '201':
+          $ref: '#/components/responses/ProjectResponses'
+            
+  /project/{projectID}:
+    patch:
+      operationId: updateProject
+      tags: 
+        - project
+      parameters: 
+        - $ref: '#/components/parameters/projectID'
+      requestBody: 
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/TaskPatch'
+      responses:
+        '202':
+          $ref: '#/components/responses/TaskResponses'
+    delete:
+      operationId: deleteProject
+      tags: 
+        - project
+      parameters: 
+        - $ref: '#/components/parameters/taskID'
+      responses: 
+        '204':
+          description: Delete success
+components:
+  responses: 
+    TaskListResponses:
+      description: List of tasks
+      content: 
+        application/json:
+          schema: 
+            type: array
+            items: 
+             $ref: '#/components/schemas/Task'
+    TaskResponses:
+      description: Tasks
+      content: 
+        application/json:
+          schema: 
+             $ref: '#/components/schemas/Task'
+    ProjectListResponses:
+      description: List of projects
+      content: 
+        application/json:
+          schema: 
+            type: array
+            items: 
+             $ref: '#/components/schemas/Project'
+    ProjectResponses:
+      description: Projects
+      content: 
+        application/json:
+          schema: 
+             $ref: '#/components/schemas/Project'
+  schemas:
+    Task:
+            type: object
+            required: 
+             - id
+             - name
+             - project
+             - priority
+             - responsible
+             - stage
+             - startDate
+             - endDate
+             - actualExecutionTime
+            properties: 
+              id:
+               type: string
+              name:
+               type: string
+              project:
+               type: string
+              priority:
+               type: string
+              responsible:
+               type: string
+              stage:
+               type: string
+              startDate:
+               type: string
+              endDate:
+               type: string
+              actualExecutionTime:
+               type: string
+    TaskPatch:
+            type: object
+            properties: 
+              name:
+               type: string
+              project:
+               type: string
+              responsible:
+               type: string
+              stage:
+               type: string
+              endDate:
+               type: string
+    Project:
+            type: object
+            required: 
+             - id
+             - name
+             - responsible
+             - startDate
+             - deadline
+            properties: 
+              id:
+               type: string
+              name:
+               type: string
+              responsible:
+               type: string
+              startDate:
+               type: string
+              deadline:
+               type: string
+
+  parameters: 
+    taskID:
+      in: path
+      name: taskID
+      required: true
+      schema:
+            type: string
+      example: 5b3201b6-b8e6-4544-96a7-ac046a734f17
+    projectID:
+      in: path
+      name: projectID
+      required: true
+      schema:
+            type: string
+      example: 123
