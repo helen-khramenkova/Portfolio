@@ -3,7 +3,8 @@
 <h3 align="center">A novice system analyst with practical experience in IT.</h3>
 
 <h3 align="left">Connect with me:</h3>
-<p align="left"> <Email: hramenkovaelena36@gmail.com>
+<h4 align ="left"> Email: hramenkovaelena36@gmail.com </h4>
+<p align="left"> 
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
