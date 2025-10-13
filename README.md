@@ -4,6 +4,22 @@
 
 <h3 align="left">Connect with me:</h3>
 <h4 align ="left"> Email: hramenkovaelena36@gmail.com </h4>
+<h3 align="left">📁 Portfolio Files Overview</h3>
+
+<p>This portfolio contains visual demonstrations of my analytical work process and artifacts:</p>
+
+<h4 align="left">Analytical Projects:</h4>
+<ul>
+  <li><b>Case_1_Tableau_Dashboard.png</b> - Interactive business metrics dashboard with user behavior analysis</li>
+  <li><b>Case_2_Ad_hoc_Analysis.png</b> - Root cause investigation for business metrics anomalies</li>
+  <li><b>Case_3_API_Documentation.png</b> - API specification and testing examples</li>
+</ul>
+
+<h4 align="left">🛠 Technical Skills Demonstration:</h4>
+<ul>
+  <li><b>Technical_Skills.png</b> - SQL queries, data modeling, and process diagrams</li>
+  <li><b>API_Integration.png</b> - Swagger documentation and Postman testing workflows</li>
+</ul>
 <p align="left"> 
 </p>
 
