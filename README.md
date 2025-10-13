@@ -4,21 +4,21 @@
 
 <h3 align="left">Connect with me:</h3>
 <h4 align ="left"> Email: hramenkovaelena36@gmail.com </h4>
-<h3 align="left">📁 Portfolio Files Overview</h3>
+<h3 align="left">Portfolio Files Overview</h3>
 
 <p>This portfolio contains visual demonstrations of my analytical work process and artifacts:</p>
 
-<h4 align="left">Analytical Projects:</h4>
+<h4 align="left">📁 Analytical Projects:</h4>
 <ul>
-  <li><b>Case_1_Tableau_Dashboard.png</b> - Interactive business metrics dashboard with user behavior analysis</li>
-  <li><b>Case_2_Ad_hoc_Analysis.png</b> - Root cause investigation for business metrics anomalies</li>
-  <li><b>Case_3_API_Documentation.png</b> - API specification and testing examples</li>
+  <li><b>Physical_database_model.png</b> - physical model of the task scheduler database</li>
+  <li><b>Task_Scheduler_Interface_1.png</b> - task scheduler home page interface</li>
+  <li><b>Task_Scheduler_Interface_2.png</b> - task scheduler interface with a demonstration of functionality</li>
 </ul>
 
 <h4 align="left">🛠 Technical Skills Demonstration:</h4>
 <ul>
-  <li><b>Technical_Skills.png</b> - SQL queries, data modeling, and process diagrams</li>
-  <li><b>API_Integration.png</b> - Swagger documentation and Postman testing workflows</li>
+  <li><b>1Сv8.1CD</b> - task scheduler information system on the 1C platform</li>
+  <li><b>taskTracker_api.yuml</b> - Swagger documentation</li>
 </ul>
 <p align="left"> 
 </p>
